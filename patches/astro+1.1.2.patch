@@ -1,0 +1,13 @@
+diff --git a/node_modules/astro/dist/runtime/server/astro-global.js b/node_modules/astro/dist/runtime/server/astro-global.js
+index d60834f..d25aa09 100644
+--- a/node_modules/astro/dist/runtime/server/astro-global.js
++++ b/node_modules/astro/dist/runtime/server/astro-global.js
+@@ -17,7 +17,7 @@ function createAstroGlobFn() {
+ function createAstro(filePathname, _site, projectRootStr) {
+   const site = _site ? new URL(_site) : void 0;
+   const referenceURL = new URL(filePathname, `http://localhost`);
+-  const projectRoot = new URL(projectRootStr);
++  const projectRoot = projectRootStr
+   return {
+     site,
+     generator: `Astro v${ASTRO_VERSION}`,
